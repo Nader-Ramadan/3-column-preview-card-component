@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bo: hsl(31, 77%, 52%);
+    --dc: hsl(184, 100%, 22%);
+    --vdc: hsl(179, 100%, 13%);
+    --tw: hsla(0, 0%, 100%, 0.75);
+    --vlg: hsl(0, 0%, 95%);
+
+}
+body {
+    background-color: var(--vlg);
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    font-size: 15px;
+    font-family: 'Lexend Deca',sans-serif;
+    font-weight: 400;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 12px;
+    margin: 2rem;
+    overflow: hidden;
+}
+.box1 {
+    background: var(--bo);
+}
+.box2 {
+    background: var(--dc);
+}
+.box3 {
+    background: var(--vdc);
+}
+.box {
+    padding: 3em;
+}
+.box h2 {
+    font-family: 'Big Shoulders Display',cursive;
+    text-transform: uppercase;
+    margin: 1em 0;
+    color: var(--vlg);
+    font-size: 30px;
+}
+.box p {
+    color: var(--vlg);
+    line-height: 1.6;
+    opacity: 0.8;
+}
+.box a {
+    text-decoration: none;
+    background-color: var(--vlg);
+    padding: 13px 27px;
+    border-radius: 26px;
+    margin-top: 60px;
+    display: inline-block;
+    border: 2px solid var(--vlg);
+    transition: all .4s ease-in-out;
+}
+.box1 a {
+    color: var(--bo);
+}
+.box2 a {
+    color: var(--dc);
+}
+.box3 a {
+    color: var(--vdc);
+}
+.box a:hover {
+    color: var(--vlg);
+    background: transparent;
+}
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .wrapper {
+        margin: 2rem .5rem;
+    }
+}
+.attribution { 
+    text-align: center; 
+    color: var(--dc);
+}
+.attribution:hover {
+    animation: bob 0.5s ease-out forwards;
+}
+.attribution a { 
+    color: var(--bo); 
+    text-decoration: none;
+}
+@keyframes bob {
+    100% {
+        scale: 1.5;
+        padding: 1em;
+        border: 0.5em solid var(--dc);
+        border-radius: 1em;
+        box-shadow: 0.5em 0.5em 0.5em var(--vdc);
+    }
+}
